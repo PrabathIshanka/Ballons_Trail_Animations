@@ -1,0 +1,41 @@
+/* Set body styles */
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: black;
+  /* Hide the scrollbar */
+  overflow: hidden;
+}
+
+/* Set styles for span elements (hearts) */
+span {
+  background: url("https://cdn0.iconfinder.com/data/icons/all-about-love-1/500/VALENTINE_ICONS-07-256.png");
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  background-size: cover;
+  left: 50%;
+  top: 50%;
+  /* Make span elements non-interactive */
+  pointer-events: none;
+  /* Center the span elements */
+  transform: translate(-50%, -50%);
+  /* Apply animation to span elements */
+  animation: animate 6s linear;
+}
+
+/* Define animation for the span elements */
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    filter: hue-rotate(0);
+  }
+
+  100% {
+    transform: translate(-50%, -5000%);
+    /* Make the span elements invisible */
+    opacity: 0;
+    filter: hue-rotate(1000deg);
+  }
+}
